@@ -12,7 +12,11 @@ public class StringUtils {
     private static int calculateDecimalValue(int intVal, int offset) {
         if (intVal < 97 || intVal > 122)
             throw new RuntimeException("Invalid String Passed");
-        return 1;
+        else if (intVal + offset == 123)
+            return 97;
+        else if (intVal + offset == 96)
+            return 122;
+        else return intVal + offset;
 
     }
 }
