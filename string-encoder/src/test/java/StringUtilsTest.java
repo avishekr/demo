@@ -20,4 +20,9 @@ public class StringUtilsTest {
     public void Given_offsetEqualsMinus1_When_StringEqualsa_Then_resultIsz() {
     	assertEquals(StringUtils.encode(-1,"a"), "z");
     }
+    
+    @Test
+    public void Given_offsetEquals1_When_StringEqualsabc_Then_resultIsbcd() {
+    	assertEquals(StringUtils.encode(1,"abc"), "bcd");
+    }
 }
