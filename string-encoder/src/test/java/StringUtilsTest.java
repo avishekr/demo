@@ -30,4 +30,11 @@ public class StringUtilsTest {
     public void Given_offsetEqualsMinus1_When_StringEqualsabc_Then_resultIszab() {
     	assertEquals(StringUtils.encode(-1,"abc"), "zab");
     }
+    
+    @Test
+    public void throwsRuntimeExceptions_When_invalidStringIsPassed() {
+
+    	exception.expect(RuntimeException.class);
+    	StringUtils.encode(1,"123");
+    }
 }
